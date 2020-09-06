@@ -30,12 +30,12 @@ class MainActivity : AppCompatActivity() {
 
     fun calculatePrices() {
         val travelName = et_a1.text.toString()
-        val qtdTravels = et_a2.text.toString().toInt()
+        val qtdTravels = et_a2.text.toString().toDouble()
         val travelPrice = et_a3.text.toString().toDouble()
         val daysOfWorkInAMonth = 22
 
-        val dailyPrice: Double = (qtdTravels.toDouble() * travelPrice)
-        val monthlyPrice: Double = (qtdTravels.toDouble() * travelPrice * daysOfWorkInAMonth)
+        val dailyPrice = qtdTravels * travelPrice
+        val monthlyPrice = qtdTravels * travelPrice * daysOfWorkInAMonth
 
         tv_result_day.text = "R$ %.2f".format(dailyPrice)
         tv_result_month.text = "R$ %.2f".format(monthlyPrice)
