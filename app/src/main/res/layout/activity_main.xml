@@ -7,12 +7,142 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_q1"
+        android:paddingTop="8dp"
+        android:paddingHorizontal="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/question_1"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_a1"
+        android:inputType="text"
+        android:layout_marginHorizontal="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/answer_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_q1"/>
+
+    <TextView
+        android:id="@+id/tv_q2"
+        android:paddingTop="8dp"
+        android:paddingHorizontal="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question_2"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_a1"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_a2"
+        android:inputType="number"
+        android:layout_marginHorizontal="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/answer_2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_q2"/>
+
+    <TextView
+        android:id="@+id/tv_q3"
+        android:paddingTop="8dp"
+        android:paddingHorizontal="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question_3"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_a2"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_a3"
+        android:inputType="numberDecimal"
+        android:layout_marginHorizontal="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/answer_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_q3"/>
+
+    <TextView
+        android:id="@+id/tv_result_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 0,00"
+        android:textSize="42sp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/et_a3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
+    <TextView
+        android:id="@+id/tv_message_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="por dia"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_result_day"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_result_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 0,00"
+        android:textSize="42sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_message_day"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_message_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="por mês"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_result_month"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_colored_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="2dp"
+        android:text=" "
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_message_month"
+        />
+
+    <Button
+        android:id="@+id/bt_calc"
+        android:onClick="calculate"
+        android:layout_marginHorizontal="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular!"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/tv_colored_message"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
